@@ -1,0 +1,130 @@
+body {
+  background-color: black;
+  margin: 0;
+  height: 100vh;
+
+
+}
+.App {
+  display: flex;
+  flex-direction: column;
+
+}
+.Laptop {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+
+}
+.image {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 80%;
+}
+.added {
+  position: absolute ;
+  opacity: 0.6;
+  width: 70%;
+}
+.added-1 {
+  color: #c700fe;
+  margin: 20px;
+  padding: 10px; 
+  font-size: 20px;
+}
+
+.Header {
+  display: flex;
+  justify-content: center;
+  color: #ed440c;
+}
+.Purpose {
+  display: grid;
+  height: 70%;
+  margin-left: 15px;
+  margin-right: 15px;
+
+ grid-template-columns: 1fr 1fr 1fr;
+ grid-template-rows: 50px 50px 50px 50px 50px 50px 50px;
+ grid-row-gap: 10px;
+ 
+
+}
+
+input::-webkit-input-placeholder { 
+  color:blue;
+  text-align: center;
+  font-size: 18px; 
+ } 
+
+.Input-1 {
+  background-color: rgb(44, 26, 39);
+  border: solid #a100ce  2px;
+  padding: 10px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+ }
+ .Input-1:focus {
+  color:#ed440c;
+  }
+  .Input-1::-webkit-input-placeholder {
+    color:#ed440c;
+    }
+  
+.Input-2 {
+  background-color: rgb(44, 26, 39);
+  border: solid #a100ce  2px;
+  padding: 10px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  
+   }
+   .Input-2:focus {
+    color:#ed440c;
+    }
+.Input-3 {
+  background-color: rgb(44, 26, 39);
+  border: solid #a100ce  2px;
+  padding: 10px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+     }
+.Input-4 {
+  background-color: rgb(44, 26, 39);
+  border: solid #a100ce  2px;
+  padding: 10px;
+      grid-column-start: 2;
+      grid-column-end: 4;
+       }  
+.Input-5 {
+  background-color: rgb(44, 26, 39);
+  border: solid #a100ce  2px;
+  padding: 10px;
+        grid-column-start: 1;
+        grid-column-end: 3;
+         } 
+.Input-6 {
+  background-color: rgb(44, 26, 39);
+  border: solid #a100ce  2px;
+  padding: 10px;
+          grid-column-start: 2;
+          grid-column-end: 4;
+           } 
+.Input-7 {
+  background-color: rgb(44, 26, 39);
+  border: solid #a100ce  2px;
+  padding: 10px;
+          grid-column-start: 1;
+          grid-column-end: 5;
+           }
+ul{
+  background-color: #ed440c;
+}             
+           
+           
+
+   
+
+
+
+
