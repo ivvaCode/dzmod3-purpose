@@ -1,101 +1,89 @@
 import { Component } from "react";
 import image from './img-1.jpg';
+import icon from './icon.png';
 
 export class Purpose extends Component {
     state = {
         userInput:'',
-        allPurpose: [],
-        purpose7:'Relax',
+        allPurpose: []
     }
 
     //получаем доступ к тому, что вводит пользователь
     onChangeEvent(event) {
         this.setState({userInput: event})
-    console.log(event);
+    //console.log(event);
     }
+   
     //кнопка- Добавить
     addItem(input) {
+        if (input === '') {
+            alert("Please enter an item")
+        } else {
+    //получим доступ к массиву списка
         let listWeek = this.state.allPurpose;
         listWeek.push(input);
-    console.log (listWeek);
-        this.setState ({allPurpose: listWeek, userInput:'', })
-    } 
-    
-        
+        this.setState ({allPurpose: listWeek, userInput: '' })
+       //console.log (listWeek);
+    }} 
+ //кнопка- Удалить
+    deleteItem() {
+        let listWeek = this.state.allPurpose;
+        listWeek = [];
+        this.setState ({allPurpose: listWeek})
+    }
+
+   //перечеркиваем пункт списка, ставим подслушку на событие event c пом. event.target
+    crossedWord(event) {
+        const li = event.target;
+        li.classList.toggle('crossed');
+    }
+         
     render() {
         return (
-       <div className="container">
-        <div className='Laptop'>
+<div className="container">
+    <div className='Laptop'>
     
-    <img className='image' src={ image } alt="Laptop"/>
-    <div className="added">
-    <p className="added-1" >"What is your purpose on Monday?"</p>
-    </div>
-
+      <img className='image' src={ image } alt="Laptop"/>
+    
         <div className="Purpose">
 
-            <input className="Input-3" 
+            <input className="Input" 
             type='text'
-            placeholder="What is your purpose on Tuesday?"
+            placeholder="What do you need to do?"
             onChange = {(event) => {this.onChangeEvent(event.target.value)}}
             />
-            
-            <input className="Input-2" 
-            type='text'
-            placeholder="What is your purpose on Tuesday?"
-            onChange = {(event) => {this.onChangeEvent(event.target.value)}}
-            />
+            <div className="Btn">
+           <button className="BtnAdd" onClick={() => this.addItem(this.state.userInput)}>Add</button>
+       </div>
 
-             <input className="Input-3"
-            type='text'
-            placeholder="What is your purpose on Whensday?"
-            onChange = {(event) => {this.onChangeEvent(event.target.value)}}
-            />
-
-            <input className="Input-4"
-            type='text'
-            placeholder="What is your purpose on 4?"
-            onChange = {(event) => {this.onChangeEvent(event.target.value)}}
-                />
-
-            <input className="Input-5"
-            type='text'
-            placeholder="What is your purpose on 5?"
-            onChange = {(event) => {this.onChangeEvent(event.target.value)}}
-            />
-
-            <input className="Input-6"
-            type='text'
-            placeholder="What is your purpose on 6?"
-            onChange = {(event) => {this.onChangeEvent(event.target.value)}}
-            />
-        
-            <input className="Input-7"
-            type='text' 
-            placeholder="RELAX"
-            onChange = {(event) => {this.onChangeEvent(event.target.value)}}
-            />  
-            <div className="button-add">
-           <button onClick={() => this.addItem(this.state.userInput)}>Добавить</button>
-       </div> 
-      
        <ul>
-        {this.state.listWeek.map((item, index) => (
-            <li key={index}>{item}</li>
+        {this.state.allPurpose.map((item, index) => (   
+            <li onClick = {this.crossedWord} key = {index}>
+              <img classList = 'icon' src= {icon} width='30px' alt="barbara"></img>  
+                {item} </li> 
         ))}
-      <li ></li>
-       </ul>
-        </div>
+        </ul> 
+            
+        <div className="Btn">
+            <button  className="BtnDel" onClick={() => this.deleteItem()}>Delete</button>
+        </div> 
+    </div>
+                   
+</div> 
+</div> 
+          
+)}}
 
-        
-       </div>
-       </div>
+
+
+
+
+            
+       
+
+    
+       
+      
+      
            
     
-          
-
-
-
-        )
-    }
-}

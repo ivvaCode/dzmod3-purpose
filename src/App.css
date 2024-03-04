@@ -37,89 +37,97 @@ body {
   display: flex;
   justify-content: center;
   color: #ed440c;
+  font-family: "Cairo Play", sans-serif; 
 }
 .Purpose {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+align-content: center;
   height: 70%;
   margin-left: 15px;
   margin-right: 15px;
-
- grid-template-columns: 1fr 1fr 1fr;
- grid-template-rows: 50px 50px 50px 50px 50px 50px 50px;
- grid-row-gap: 10px;
- 
-
 }
 
 input::-webkit-input-placeholder { 
   color:blue;
   text-align: center;
-  font-size: 18px; 
+  font-size: 30px; 
  } 
 
-.Input-1 {
+.Input {
   background-color: rgb(44, 26, 39);
-  border: solid #a100ce  2px;
+  border: solid  #c700fe  2px;
   padding: 10px;
-    grid-column-start: 1;
-    grid-column-end: 3;
+  font-family: "Cairo Play", sans-serif; 
+  font-size: 20px;
+  color: #c700fe;
+   
  }
- .Input-1:focus {
+ .Input:focus {
   color:#ed440c;
   }
-  .Input-1::-webkit-input-placeholder {
-    color:#ed440c;
-    }
+ .crossed {
+    text-decoration: line-through 2px red;
+    background-color: rgb(44, 26, 39);
+    color: #ed440c;
+  }
   
-.Input-2 {
-  background-color: rgb(44, 26, 39);
-  border: solid #a100ce  2px;
-  padding: 10px;
-  grid-column-start: 2;
-  grid-column-end: 4;
-  
-   }
-   .Input-2:focus {
-    color:#ed440c;
-    }
-.Input-3 {
-  background-color: rgb(44, 26, 39);
-  border: solid #a100ce  2px;
-  padding: 10px;
-    grid-column-start: 1;
-    grid-column-end: 3;
-     }
-.Input-4 {
-  background-color: rgb(44, 26, 39);
-  border: solid #a100ce  2px;
-  padding: 10px;
-      grid-column-start: 2;
-      grid-column-end: 4;
-       }  
-.Input-5 {
-  background-color: rgb(44, 26, 39);
-  border: solid #a100ce  2px;
-  padding: 10px;
-        grid-column-start: 1;
-        grid-column-end: 3;
-         } 
-.Input-6 {
-  background-color: rgb(44, 26, 39);
-  border: solid #a100ce  2px;
-  padding: 10px;
-          grid-column-start: 2;
-          grid-column-end: 4;
-           } 
-.Input-7 {
-  background-color: rgb(44, 26, 39);
-  border: solid #a100ce  2px;
-  padding: 10px;
-          grid-column-start: 1;
-          grid-column-end: 5;
-           }
 ul{
-  background-color: #ed440c;
-}             
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  background-color: #670084;
+  
+}  
+li {
+  align-items: center;
+  padding: 10px; 
+  font-family: "Cairo Play", sans-serif; 
+  font-size: 30px;
+} 
+.icon {
+  align-items: center;
+}
+.Btn {
+  margin: 20px;
+  align-self: center;
+}
+.BtnAdd {
+  text-align: center;
+   padding: 10px;
+   background-color: black ;
+  border: 2px solid #ed440c ;
+   align-items: center;
+   font-size: 25px;
+   width: 200px;
+   color: blue;
+   font-family: "Cairo Play", sans-serif; 
+ }
+.BtnAdd:focus {
+  background-color: rgb(44, 26, 39);
+  font-size: 30px;
+}
+.BtnDel {
+ text-align: center;
+  padding: 10px;
+  background-color: black ;
+ border: 2px solid #ed440c ;
+  align-items: center;
+  font-size: 25px;
+  width: 200px;
+  color: #ed440c;
+  font-family: "Cairo Play", sans-serif; 
+}
+.BtnDel:focus {
+  background-color: rgb(44, 26, 39);
+  font-size: 30px;
+}
+
+
+
+
+ 
+        
            
            
 
