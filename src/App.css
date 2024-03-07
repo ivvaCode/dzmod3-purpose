@@ -1,25 +1,24 @@
 body {
   background-color: black;
   margin: 0;
-  height: 100vh;
-
+ height: 100%;
 
 }
 .App {
   display: flex;
   flex-direction: column;
-
 }
 .Laptop {
  display: grid;
  grid-template-columns: 1fr 1fr;
+ 
 
 }
 .image {
   position: relative;
   margin: 0;
   width: 100%;
-  height: 80%;
+  height: 70.%;
 }
 .added {
   position: absolute ;
@@ -103,7 +102,7 @@ li {
    color: blue;
    font-family: "Cairo Play", sans-serif; 
  }
-.BtnAdd:focus {
+.BtnAdd:hover {
   background-color: rgb(44, 26, 39);
   font-size: 30px;
 }
@@ -118,7 +117,7 @@ li {
   color: #ed440c;
   font-family: "Cairo Play", sans-serif; 
 }
-.BtnDel:focus {
+.BtnDel:hover {
   background-color: rgb(44, 26, 39);
   font-size: 30px;
 }

@@ -51,6 +51,7 @@ export class Purpose extends Component {
             type='text'
             placeholder="What do you need to do?"
             onChange = {(event) => {this.onChangeEvent(event.target.value)}}
+            value={this.state.userInput}
             />
             <div className="Btn">
            <button className="BtnAdd" onClick={() => this.addItem(this.state.userInput)}>Add</button>
@@ -68,6 +69,8 @@ export class Purpose extends Component {
             <button  className="BtnDel" onClick={() => this.deleteItem()}>Delete</button>
         </div> 
     </div>
+    
+    
                    
 </div> 
 </div> 
@@ -78,7 +81,7 @@ export class Purpose extends Component {
 
 
 
-            
+           
        
 
     
